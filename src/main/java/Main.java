@@ -48,7 +48,7 @@ public class Main {
         }
 
     }
-
+//покупатель сходил в магазин (store) и арендовал (rental)
     private void customerRentInventory(Customer customer) {
 
         try (Session session = util.getSessionFactory().getCurrentSession()) {
@@ -82,7 +82,7 @@ public class Main {
             session.getTransaction().commit(); // Завершение транзакции
         }
     }
-
+//покупатель пошел и вернул ранее арендованный фильм
     private void customerReturnRentalFilmToStore() {
 
         try (Session session = util.getSessionFactory().getCurrentSession()) {
@@ -92,7 +92,7 @@ public class Main {
             session.getTransaction().commit();
         }
     }
-
+//сняли новый фильм, и он стал доступен для аренды
     private void makeNewFilm() {
 
         try (Session session = util.getSessionFactory().getCurrentSession()) {
