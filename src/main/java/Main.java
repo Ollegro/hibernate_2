@@ -1,4 +1,3 @@
-import dao.GenericDAO;
 import entities.*;
 import org.hibernate.Session;
 
@@ -18,6 +17,7 @@ public class Main {
         Customer customer = main.createCustomer();
         main.customerRentInventory(customer);
         main.makeNewFilm();
+        main.customerReturnRentalFilmToStore();
     }
 
     private Customer createCustomer() {

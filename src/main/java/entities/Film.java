@@ -1,16 +1,11 @@
 package entities;
 
-import dao.FilmDAO;
-import dao.GenericDAO;
 import dao.RatingConverter;
 import dao.YearAttributeConverter;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.query.Query;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
