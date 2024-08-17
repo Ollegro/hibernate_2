@@ -1,4 +1,7 @@
-import dao.*;
+import dao.CityDAO;
+import dao.FilmDAO;
+import dao.GenericDAO;
+import dao.RentalDAO;
 import entities.*;
 import lombok.Getter;
 import org.hibernate.SessionFactory;

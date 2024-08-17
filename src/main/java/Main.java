@@ -1,4 +1,3 @@
-import dao.GenericDAO;
 import entities.*;
 import org.hibernate.Session;
 
@@ -18,6 +17,7 @@ public class Main {
         Customer customer = main.createCustomer();
         main.customerRentInventory(customer);
         main.makeNewFilm();
+        main.customerReturnRentalFilmToStore();
     }
 
     private Customer createCustomer() {
@@ -97,7 +97,7 @@ public class Main {
 
         try (Session session = util.getSessionFactory().getCurrentSession()) {
             session.beginTransaction();
-            Language language = util.getLanguageDAO().getItems(0, 20).stream().unordered().findAny().get();
+            Language language = util.getLanguageDAO().getItems(0, 20).stream().unordered().findAny().orElseThrow();
             List<Category> categories = util.getCategoryDAO().getItems(1, 5);
             List<Actor> actors = util.getActorDAO().getItems(0, 10);
             Film film = new Film();

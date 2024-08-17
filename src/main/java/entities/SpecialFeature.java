@@ -1,6 +1,8 @@
 package entities;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+
 import java.util.Arrays;
 import java.util.Objects;
 @AllArgsConstructor
